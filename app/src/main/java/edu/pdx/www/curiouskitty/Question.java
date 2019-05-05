@@ -2,27 +2,27 @@ package edu.pdx.www.curiouskitty;
 
 public class Question {
 
-    private int mTextResId;
-    private boolean mAnswerTrue;
-    Question(int textResId, boolean answerTrue) {
-        mTextResId = textResId;
-        mAnswerTrue = answerTrue;
+    private String question;
+    private String manswer;
+    private String[] moption1;
+
+    public Question(String question, String manswer, String[] moption1) {
+        this.question = question;
+        this.moption1 = moption1;
+
+        this.manswer = manswer;
     }
 
-
-    int getTextResId() {
-        return mTextResId;
+    public String getQuestion() {
+        return question;
     }
 
-    public void setTextResId(int textResId) {
-        mTextResId = textResId;
+    public String getMoption1() {
+        return String.valueOf(moption1);
     }
 
-    public boolean isAnswerTrue() {
-        return mAnswerTrue;
+    public String getManswer() {
+        return manswer;
     }
 
-    public void setAnswerTrue(boolean answerTrue) {
-        mAnswerTrue = answerTrue;
-    }
 }

@@ -11,41 +11,51 @@
 
 
     <TextView
-
+        android:layout_marginTop="50dp"
         android:id="@+id/question_text_view"
-        android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="24dp"/>
+        android:layout_gravity="center"
+        android:padding="24dp" />
         //android:text="@string/question" />
 
-    <LinearLayout
+    <RadioButton
+        android:layout_marginTop="100dp"
+        android:id="@+id/option1"
+        android:layout_gravity="left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:text="@string/false_button" />
 
-        <Button
-            android:id="@+id/false_button"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content"
-            android:text="@string/false_button" />
+    <RadioButton
+        android:id="@+id/option2"
+        android:layout_width="wrap_content"
+        android:layout_gravity="left"
+        android:layout_height="wrap_content"
+        android:text="@string/false_button" />
 
-        <Button
-            android:id="@+id/true_button"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content"
-            android:text="@string/true_button" />
-    </LinearLayout>
+    <RadioButton
+        android:id="@+id/option3"
+        android:layout_width="wrap_content"
+        android:layout_gravity="left"
+        android:layout_height="wrap_content"
+        android:text="@string/false_button" />
+
+    <RadioButton
+        android:id="@+id/option4"
+        android:layout_width="wrap_content"
+        android:layout_gravity="left"
+        android:layout_height="wrap_content"
+        android:text="@string/false_button" />
 
     <Button
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="150dp"
         android:id="@+id/next_button"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/next_button" />
+
     <Button
         android:layout_marginTop="10dp"
         android:id="@+id/cheat_button"
