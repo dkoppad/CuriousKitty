@@ -1,5 +1,5 @@
 {
-	"quiz_1": {
+	"questions": {
 		"id": 1,
 		"title": "Sample Quiz",
 		"quizitems": [{

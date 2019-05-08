@@ -1,0 +1,53 @@
+{
+	"quiz": {
+		"id": 3,
+		"title": "India_2",
+		"wraparound": false,
+		"quizitems": [{
+			"id": 1,
+			"questiontext": "Mount Everest is located in ?",
+			"answertext": "India",
+			"choices": ["Nepal",
+			"Tibet",
+			"China",
+			"India"]
+		},
+		{
+			"id": 2,
+			"questiontext": "Which soil is suitable for agriculture ?",
+			"answertext": "Peaty soil",
+			"choices": ["Sand",
+			"Black soil",
+			"Peaty soil",
+			"Red soil"]
+		},
+		{
+			"id": 3,
+			"questiontext": "Black soils are best suited for the cultivation of ?",
+			"answertext": "Cotton",
+			"choices": ["Cotton",
+			"Rice",
+			"Cereals",
+			"Sugarcane"]
+		},
+		{
+			"id": 4,
+			"questiontext": "The device used for measuring altitudes is ?",
+			"answertext": "altimeter",
+			"choices": ["altimeter",
+			"ammeter",
+			"audiometer",
+			"galvanometer"]
+		},
+		{
+			"id": 5,
+			"questiontext": "What is the tallest building in the United States?",
+			"answertext": "One World Trace Center, New York City, NY",
+			"choices": ["Trump International Hotel and Tower, Chicago IL",
+			"The Wilshire Grand Center, Los Angeles, CA",
+			"JP Morgan Chase Tower, Houston, TX",
+			"One World Trace Center, New York City, NY"]
+		}]
+	}
+	
+}

@@ -1,0 +1,62 @@
+{
+	"quiz": {
+		"id": 3,
+		"title": "India_1",
+		"wraparound": false,
+		"quizitems": [{
+			"id": 1,
+			"questiontext": "The first chairman of the Atomic Energy Commission was ?",
+			"answertext": "DR.H.J.Bhabha",
+			"choices": ["Dr.H.J.Bhabha",
+			"Dr.A.P.J.Abdul Kalam",
+			"Dr.Vickram Sarabhai",
+			"Dr.C.V.Raman"]
+		},
+		{
+			"id": 2,
+			"questiontext": "D.D.T. was invented by ? ",
+			"answertext": "Mosley",
+			"choices": ["Mosley",
+			"Rudeolf",
+			"Karl Benz",
+			"Dalton"]
+		},
+		{
+			"id": 3,
+			"questiontext": "Which is considered as the biggest port of India ? ",
+			"answertext": "Mumbai",
+			"choices": ["Kolkata",
+			"Cochin",
+			"Chennai",
+			"Mumbai"]
+		},
+		{
+			"id": 4,
+			"questiontext": "The gas used for making vegetables is ?",
+			"answertext": "Hydrogen",
+			"choices": ["Oxygen",
+			"Carbon dioxide",
+			"Hydrogen",
+			"Nitrogen"]
+		},
+		{
+			"id": 5,
+			"questiontext":"Who was the Prime Minister of India for the Year 2018 ?",
+			"answertext": "Modi",
+			"choices": ["Manmohan Singh",
+			"Rahul Gandi",
+			"Jawhar Lal Nehru",
+			"Modi"]
+		}
+        {
+            "id": 6,
+            "questiontext":"The Gate way of India is in?",
+            "answertext": "Mumbai",
+            "choices": ["Chennai",
+                "Kolkata",
+                "New Delhi",
+            "Mumbai"]
+        }]
+	}
+	
+}
