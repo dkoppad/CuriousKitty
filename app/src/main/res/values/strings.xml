@@ -6,6 +6,12 @@
     <string name="Quizz_3">Quizz_3</string>
     <string name="quizz_question">Questions</string>
 
+    <string-array name="quizz_selection">
+        <item>Environment</item>
+        <item>How well do you know India</item>
+        <item>How well do you know US</item>
+    </string-array>
+
     <string name="false_button">False</string>
     <string name="true_button">True</string>
     <string name="cheat_button">Cheat</string>
@@ -13,5 +19,9 @@
     <string name="incorrect_toast">SORRY... Wrong answer!!!</string>
     <string name="correct_toast">Yay... Correct answer!!!</string>
     <string name="cheat_toast">Cheating is injurious to health!</string>
+    <string name="Score_toast">Gome Over: Score Is...</string>
+
+    <string name="Score_details">Your Score is:</string>
+
 
 </resources>

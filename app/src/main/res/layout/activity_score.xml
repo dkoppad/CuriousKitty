@@ -1,9 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation ="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ScoreActivity">
+    android:gravity="center"
+    android:text="@string/quizz_question"
+    tools:context=".quizz_page">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/Score_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:textSize="18sp"
+        android:text="@string/Score_details" />
+    <TextView
+        android:id="@+id/score_correct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="24dp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/score_wrong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="24dp"
+        android:textSize="18sp" />
+
+    <Button
+        android:layout_marginTop="50dp"
+        android:id="@+id/Quizz_restart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Restart Quizz" />
+
+
+</LinearLayout>

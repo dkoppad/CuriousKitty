@@ -44,23 +44,14 @@
             android:textColor="@color/black"
             android:textStyle="bold"/>
 
-        <RadioButton
-            android:id="@+id/checkBox"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="@string/Quizz_1" />
 
-        <RadioButton
-            android:id="@+id/checkBox2"
+        <Spinner
+            android:id="@+id/spinner"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Quizz_2" />
+            android:layout_height="wrap_content">
 
-        <RadioButton
-            android:id="@+id/checkBox3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Quizz_3" />
+        </Spinner>
+
 
         <Button
             android:id="@+id/Start_button"
@@ -68,8 +59,14 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="90dp"
-
             android:text="@string/start_test_button" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
 
 
     </LinearLayout>

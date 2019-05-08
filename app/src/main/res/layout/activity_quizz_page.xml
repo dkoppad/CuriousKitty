@@ -11,50 +11,50 @@
 
 
     <TextView
-        android:layout_marginTop="50dp"
-        android:id="@+id/question_text_view"
+        android:id="@+id/question_text_view_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:padding="24dp" />
-        //android:text="@string/question" />
+        android:layout_marginTop="50dp"
+        android:padding="24dp"
+        android:textSize="18sp" />
 
-    <RadioButton
-        android:layout_marginTop="100dp"
-        android:id="@+id/option1"
-        android:layout_gravity="left"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/false_button" />
-
-    <RadioButton
-        android:id="@+id/option2"
+    <RadioGroup
+        android:id="@+id/radio_group_id"
         android:layout_width="wrap_content"
         android:layout_gravity="left"
-        android:layout_height="wrap_content"
-        android:text="@string/false_button" />
+        android:layout_height="wrap_content">
 
-    <RadioButton
-        android:id="@+id/option3"
-        android:layout_width="wrap_content"
-        android:layout_gravity="left"
-        android:layout_height="wrap_content"
-        android:text="@string/false_button" />
+        <RadioButton
+            android:id="@+id/option1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:onClick="checkButton"
+            android:layout_marginTop="100dp" />
 
-    <RadioButton
-        android:id="@+id/option4"
-        android:layout_width="wrap_content"
-        android:layout_gravity="left"
-        android:layout_height="wrap_content"
-        android:text="@string/false_button" />
+        <RadioButton
+            android:id="@+id/option2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton"
+            android:layout_gravity="left" />
 
-    <Button
-        android:layout_marginTop="150dp"
-        android:id="@+id/next_button"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/next_button" />
+        <RadioButton
+            android:id="@+id/option3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton"
+            android:layout_gravity="left" />
+
+        <RadioButton
+            android:id="@+id/option4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton"
+            android:layout_gravity="left"/>
+
+    </RadioGroup>
 
     <Button
         android:layout_marginTop="10dp"
