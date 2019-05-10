@@ -21,6 +21,8 @@ public class CheatActivity extends AppCompatActivity {
 
         tv = (TextView) findViewById(R.id.cheat_text_view_1);
 
+        //receives the answer for the current question and displays it when cheat button is pressed
+
         cheatAns= getIntent().getExtras().getString("Cheat");
         Log.d(TAG, "cheat: " + cheatAns );
         tv.setText(cheatAns);

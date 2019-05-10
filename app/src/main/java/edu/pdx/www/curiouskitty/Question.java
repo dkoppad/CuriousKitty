@@ -9,6 +9,7 @@ public class Question {
     private String moption3;
     private String moption4;
 
+
     public Question(String question, String manswer, String moption1,String moption2, String moption3,String moption4) {
         this.question = question;
         this.manswer = manswer;
@@ -17,6 +18,8 @@ public class Question {
         this.moption3 = moption3;
         this.moption4 = moption4;
     }
+
+    // getters for the constructs
 
     public String getQuestion() {
         return question;

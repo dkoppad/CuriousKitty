@@ -43,8 +43,9 @@ public class quizz_page extends AppCompatActivity {
 
     private static final String KEY_INDEX = "index";
     private static final String KEY_CHEATER_STATUS = "key_status";
-    private static final String KEY_ANSWER_STATUS = "0";
-    private int mcurrentindex;
+    private static final String KEY_CORRECT_ANSWER_STATUS = "0";
+    private static final String KEY_WRONG_ANSWER_STATUS = "0";
+
 
 
     //FileInputStream stream;
@@ -66,6 +67,8 @@ public class quizz_page extends AppCompatActivity {
 
         if (savedInstanceState != null) {
             mCurrentIndex = savedInstanceState.getInt(KEY_INDEX, 0);
+            wrong = savedInstanceState.getInt(KEY_CORRECT_ANSWER_STATUS, 0);
+            correct = savedInstanceState.getInt(KEY_WRONG_ANSWER_STATUS, 0);
         }
 
 
@@ -77,9 +80,6 @@ public class quizz_page extends AppCompatActivity {
 
         //load first question
         setScreen(mCurrentIndex);
-
-
-
 
         moption1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -232,28 +232,36 @@ public class quizz_page extends AppCompatActivity {
 
     }
 
+    /**
+     *
+     * loadAllQuestions: receives input from the loadJSONfromAssets in a string named jsonStr
+     * In jsonStr the string "questions" is searched and the key Value pairs are stored in the
+     * object quiz. All the key:values pairs are looped and the questionm answer, choices are extracted.
+     */
+
     // Make a list with all Questions
     private String loadAllQuestions() {
         questionItems = new ArrayList<>();
         String[] option = new String[10];
         String jsonStr = null;
 
+        // Storing the input from the Main Activity page in filename variable
         filename = getIntent().getExtras().getString("Quiz");
         Log.d(TAG, "FileName: " + filename);
 
-        // load all the questions into JSON string based on the choice of selection
+        // load all the questions into JSON string based on the choice of selection in the Mian activity page
         switch (filename) {
             case "Environment":
                 jsonStr = loadJSONFromAsset("Environment.json");
-                Log.d(TAG, "JSON String 1 " + jsonStr);
+                //Log.d(TAG, "JSON String 1 " + jsonStr);
                 break;
             case "How well do you know India":
                 jsonStr = loadJSONFromAsset("How well do you know India.json");
-                Log.d(TAG, "JSON String 2" + jsonStr);
+                //Log.d(TAG, "JSON String 2" + jsonStr);
                 break;
             case "How well do you know US":
                 jsonStr = loadJSONFromAsset("How well do you know US.json");
-                Log.d(TAG, "JSON String 3" + jsonStr);
+                //Log.d(TAG, "JSON String 3" + jsonStr);
                 break;
 
         }
@@ -276,10 +284,12 @@ public class quizz_page extends AppCompatActivity {
                     // creating another array to store the choices
                     JSONArray choices = quest.getJSONArray("choices");
                     Log.d(TAG, "Choices: " + choices);
+                    // Storing the choices with index
                     option[1] = choices.getString(0);
                     option[2] = choices.getString(1);
                     option[3] = choices.getString(2);
                     option[4] = choices.getString(3);
+                    // passing question, answer and the options to the Questions class
                     questionItems.add(new Question(
                             questionString,
                             answerString,
@@ -298,17 +308,22 @@ public class quizz_page extends AppCompatActivity {
     }
 
 
-
+    //Based on the user selection from the Main activity page the Json file is laded from assets:
         //load the JSON file from assets folder
         private String loadJSONFromAsset (String file){
             String json =  "";
             try {
+                // opens the file from the assets folder in the project
                 InputStream is = getAssets().open((file));
                 int size = is.available();
+                //values from the file are read in an inputstream and stored in buffer and read here
                 Log.d(TAG, "size value is " + size);
                 byte[] buffer = new byte[size];
+                //Reading the buffer
                 is.read(buffer);
+                //close the file
                 is.close();
+                //store the contents of the file in json string
                 json = new String(buffer, "UTF-8");
                 //Log.d(TAG,"json is "+ json);
             } catch (IOException e) {
@@ -320,7 +335,7 @@ public class quizz_page extends AppCompatActivity {
             return json;
         }
 
-
+    // intend to open the cheat page if the user wants ot cheat and see the answer.
 
     public void openCheatpage () {
         String answer = null;
@@ -333,6 +348,8 @@ public class quizz_page extends AppCompatActivity {
 
     }
 
+    // intend to open the score page after the user has looped through all the questions in the current quizz
+    //passes the correct and wrong counter values
     public void openScorepage () {
         Intent in = new Intent(this, ScoreActivity.class);
         in.putExtra("Score_correct", correct);
@@ -344,6 +361,12 @@ public class quizz_page extends AppCompatActivity {
 
 
     }
+
+    /**
+     * Methods to debug/Observe for all lifecycle of the APP using logcat
+     *
+     */
+
     public void onStart() {
         super.onStart();
         Log.d(TAG, "onStart()_start_activity called");
@@ -370,12 +393,21 @@ public class quizz_page extends AppCompatActivity {
         Log.d(TAG, "onDestroy()_start_activity called");
     }
 
+    /**
+     *
+     * @param savedInstanceState : to save the status of the activity in case of configuration change.
+     *                           Stores the current index of the question.
+     *                           Stores the no of correct and wrong answers to keep up the score of the game.
+     */
+
     public void onSaveInstanceState(Bundle savedInstanceState) {
 
         super.onSaveInstanceState(savedInstanceState);
         Log.i(TAG, "onSaveInstanceState called");
         //pairing the instance var with key
-        savedInstanceState.putInt(KEY_INDEX,mcurrentindex);
+        savedInstanceState.putInt(KEY_INDEX,mCurrentIndex);
+        savedInstanceState.putInt(KEY_CORRECT_ANSWER_STATUS,correct);
+        savedInstanceState.putInt(KEY_WRONG_ANSWER_STATUS,wrong);
     }
 
 }

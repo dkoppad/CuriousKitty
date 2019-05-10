@@ -19,14 +19,18 @@
         android:padding="24dp"
         android:textSize="18sp" />
 
-
+    <RadioGroup
+        android:id="@+id/radio_group_id"
+        android:layout_width="wrap_content"
+        android:layout_gravity="left"
+        android:layout_height="wrap_content">
 
         <RadioButton
             android:id="@+id/option1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
-            android:layout_marginTop="50dp" />
+             />
 
         <RadioButton
             android:id="@+id/option2"
@@ -45,6 +49,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"/>
+
+    </RadioGroup>
 
 
     <Button

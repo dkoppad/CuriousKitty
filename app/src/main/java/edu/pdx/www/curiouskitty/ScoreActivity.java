@@ -23,6 +23,8 @@ public class ScoreActivity extends AppCompatActivity {
 
         tv_details = (TextView) findViewById(R.id.Score_details);
 
+        //receives the correct and wrong answer counter values and displays the score to the user
+
         correct= getIntent().getExtras().getInt("Score_correct");
         tv_correct = (TextView) findViewById(R.id.score_correct);
 
@@ -50,6 +52,7 @@ public class ScoreActivity extends AppCompatActivity {
 
     }
 
+    // Intend to open the Main activity page if restart button is pressed
     public void openStartpage () {
 
         Intent in = new Intent(this, MainActivity.class);
